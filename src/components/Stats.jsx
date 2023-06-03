@@ -1,8 +1,8 @@
 import { stats } from "../constants";
-import style from "../style";
+import styles from "../style";
 
 const Stats = () => (
-  <section className={`${style.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
+  <section className={`${styles.flexCenter} flex-row flex-wrap sm:mb-20 mb-6`}>
     {stats.map((stat) => (
       <div
         key={stat.id}
