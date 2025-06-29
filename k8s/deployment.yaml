@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hoobank-deployment
+  namespace: hoobank
+  labels:
+    app: hoobank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hoobank
+  template:
+    metadata:
+      labels:
+        app: hoobank
+    spec:
+      containers:
+        - name: hoobank
+          image: tuguldurt/hoobank-app:latest
+          ports:
+            - containerPort: 3000

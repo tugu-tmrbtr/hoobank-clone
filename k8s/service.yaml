@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hoobank-service
+  namespace: hoobank
+spec:
+  selector:
+    app: hoobank
+  ports:
+    - protocol: TCP
+      port: 80           # Port exposed inside the cluster
+      targetPort: 3000   # Port your container listens on
